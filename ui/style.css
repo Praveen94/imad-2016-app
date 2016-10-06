@@ -22,10 +22,17 @@ body {
 .container
 {
     max-width:800px;
-    margin:0 auto !important;
-    color:grey;
+    margin:0 auto;
+    color:pink;
     font-family:san-serif;
-    background-color:pink !important;
+    background-color:blue;
+    padding:60px;
     
 }
+.container a{
+    color:white;    
+}
+
+    
+
 
