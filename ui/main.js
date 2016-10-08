@@ -4,5 +4,5 @@ function anim() {
     img.style.marginLeft='100px';
     }
     
-img.onmouseover=anim();
+img.onmouseenter=anim();
 
