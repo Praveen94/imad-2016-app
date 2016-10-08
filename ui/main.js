@@ -6,8 +6,9 @@ function moveRight()
 var left=left+10;
 img.style.marginLeft=left+'px';
 }
+img.onmouseenter=function(){
 var interval=setInterval(moveRight,'100');
-
+};
     
 
 
