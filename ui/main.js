@@ -1,8 +1,8 @@
 console.log('Loaded!');
 var img=document.getElementById('madi');
-function anim() {
+img.onmouseover=function () {
     img.style.marginLeft='100px';
-    }
+    };
     
-img.onmouseover=anim();
+//=anim();
 
