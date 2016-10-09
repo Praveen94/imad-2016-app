@@ -26,7 +26,7 @@ span.innerHTML=counter.toString();
 //    counter+=1;
 
 request.open('GET','http://http:praveen94.imad.hasura-app.io/counter',true);    
-request.send(null);
+
     
 };
 
