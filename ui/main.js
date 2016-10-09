@@ -5,7 +5,7 @@ button.onclick=function(){
   var request=new XMLHttpRequest();
   request.onreadystatechange=function()
   {
-      if(request.readystate===XMLHttpRequest.DONE)
+      if(request.readyState===XMLHttpRequest.DONE)
   {
     if(request.status===200)
     {
@@ -26,7 +26,7 @@ span.innerHTML=counter.toString();
 //    counter+=1;
 
 request.open('GET','http://http:praveen94.imad.hasura-app.io/counter',true);    
-
+request.send(null);
     
 };
 
