@@ -44,7 +44,7 @@ for(var i=0;i<names.length;i++)
 {
     list="<li>"+names[i]+"</li>";
 }
-var ul=document.getElementById('namelist')
+var ul=document.getElementById('namelist');
 ul.innerHTML=list;
 };
 
