@@ -1,14 +1,13 @@
-console.log('Loaded!');
-var img=document.getElementById('madi');
-var left=0;
-function moveRight()
-{
-left=left+10;
-img.style.marginLeft=left+'px';
-}
-img.onmouseenter=function(){
-var interval=setInterval(moveRight,'100');
+//console.log('Loaded!');
+var button=document.getElementById('counter');
+var counter=0;
+button.onclick=function(){
+    counter+=1;
+var span=document.getElementById('count');
+span.innerHTML=counter.toString();
+    
 };
     
+
 
 
