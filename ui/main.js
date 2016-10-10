@@ -10,6 +10,7 @@ button.onclick=function(){
     if(request.status===200)
     {
       var counter= request.responseText;
+    var a=request.responseText;
     var span=document.getElementById('count');
 span.innerHTML=counter.toString();
         
@@ -46,8 +47,9 @@ for(var i=0;i<names.length;i++)
 }
 var ul=document.getElementById('namelist');
 ul.innerHTML=list;
-};
 
+};
+document.write("a="+a);
 
 
 
