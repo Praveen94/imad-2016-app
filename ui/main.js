@@ -12,8 +12,8 @@ button.onclick=function(){
       var counter= request.responseText;
     var a=request.responseText;
     var span=document.getElementById('count');
-span.innerHTML=counter.toString();
-        
+//span.innerHTML=counter.toString();
+span.innerHTML=a;        
     }
   }
       
@@ -49,7 +49,7 @@ var ul=document.getElementById('namelist');
 ul.innerHTML=list;
 
 };
-document.write("a="+a);
+
 
 
 
