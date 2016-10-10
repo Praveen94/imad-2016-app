@@ -1,6 +1,6 @@
 //console.log('Loaded!');
 var button=document.getElementById('counter');
-var like=document.getElementById('count')
+var like=document.getElementById('count');
 button.onclick=function(){
 like.innerHTML="Liked";    
 
@@ -44,10 +44,10 @@ ul.innerHTML=list;
   
 //    counter+=1;
 
-request.open('GET','http://praveen94.imad.hasura-app.io/submit_name?name='+name,true);    
-request.send(null);
+//request.open('GET','http://praveen94.imad.hasura-app.io/submit_name?name='+name,true);    
+//request.send(null);
     
-};
+//};
 
 
 
