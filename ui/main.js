@@ -1,13 +1,13 @@
 //console.log('Loaded!');
 var button=document.getElementById('counter');
-button.onclick=function(){
-button.innerHTML="Liked";    
-};
+//button.onclick=function(){
+//button.innerHTML="Liked";    
+//};
 
 
 //submit name
 
-/*var submit=document.getElementById('submit-btn');
+var submit=document.getElementById('submit-btn');
 submit.onclick=function()
 {
 var nameInput=document.getElementById('name');
@@ -32,7 +32,7 @@ ul.innerHTML=list;
     }
   }
       
-  };*/
+  };
   
   
   
