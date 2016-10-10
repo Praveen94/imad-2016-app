@@ -3,11 +3,12 @@ var button=document.getElementById('counter');
 
 
 //submit name
-var nameInput=document.getElementById('name');
-var name=nameInput.value;
+
 var submit=document.getElementById('submit-btn');
 submit.onclick=function()
 {
+var nameInput=document.getElementById('name');
+var name=nameInput.value;
  var request=new XMLHttpRequest();
   request.onreadystatechange=function()
   {
