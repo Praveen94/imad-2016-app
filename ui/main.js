@@ -1,6 +1,6 @@
 //console.log('Loaded!');
 var button=document.getElementById('counter');
-var like=document.getElementById('count');
+var like=document.getElementById('like');
 button.onclick=function(){
 like.innerHTML="Liked";    
 
