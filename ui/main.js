@@ -12,8 +12,8 @@ button.onclick=function(){
       var counter= request.responseText;
     var a=request.responseText;
     var span=document.getElementById('count');
-span.innerHTML=counter.toString();
-//alert(a);    
+//span.innerHTML=counter.toString();
+alert(a);    
     }
   }
       
