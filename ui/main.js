@@ -1,16 +1,16 @@
 //console.log('Loaded!');
 var button=document.getElementById('counter');
-var like=document.getElementById('like');
-button.onclick=function(){
-like.innerHTML="Liked";    
+//var like=document.getElementById('like');
+//button.onclick=function(){
+//like.innerHTML="Liked";    
 
     
-};
+//};
 
 
 //submit name
 
-/*var submit=document.getElementById('submit-btn');
+var submit=document.getElementById('submit-btn');
 submit.onclick=function()
 {
 var nameInput=document.getElementById('name');
@@ -20,7 +20,7 @@ var name=nameInput.value;
   {
       if(request.readyState==XMLHttpRequest.DONE)
   {
-    if(request.status===200)
+    if(request.status==200)
     {
      var names=request.responseText;
     names=JSON.parse(names);
@@ -34,8 +34,8 @@ ul.innerHTML=list;
 
     }
   }
-      
-  };*/
+  };
+  };
   
   
   
