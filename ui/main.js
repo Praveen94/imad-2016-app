@@ -7,7 +7,9 @@ button.onclick=function()
     counter+=1;
 var span=document.getElementById('count');
 span.innerHTML=counter.toString();
+if(counter%2==0)
+button.innerHTML="Like";
+else
 button.innerHTML="Liked";
-    
 };
 
