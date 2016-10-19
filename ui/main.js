@@ -10,7 +10,7 @@ button.onclick=function()
    request.onreadystatechange=function()
    {
        if(request.onreadystatechange===XMLHttpRequest.DONE)
-       
+     {
        if(request.status===200)
        {
        var counter=request.responseText;
@@ -27,6 +27,7 @@ else
 {
 button.innerHTML="Liked";
 button.style.width="50px";
+}
 }
 }
 };
