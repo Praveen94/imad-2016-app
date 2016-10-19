@@ -8,8 +8,13 @@ button.onclick=function()
 var span=document.getElementById('count');
 span.innerHTML=counter.toString();
 if(counter%2==0)
+{
 button.innerHTML="Like";
+button.style.width="50px";
+}
 else
 button.innerHTML="Liked";
+button.style.width="50px";
+    
 };
 
