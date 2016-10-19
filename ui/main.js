@@ -7,5 +7,7 @@ button.onclick=function()
     c+=1;
 var span=document.getElementById('count');
 span.innerHTML=c.toString();
+button.innerHTML="Liked";
+    
 };
 
