@@ -32,7 +32,7 @@ button.style.width="50px";
 }
 };
 //Make the request
-request.open('GET','http://http://praveen94.imad.hasura-app.io/counter',true);
+request.open('GET','http://praveen94.imad.hasura-app.io/counter',true);
 request.send(null);
    
  };
