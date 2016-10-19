@@ -14,7 +14,7 @@ button.onclick=function()
        if(request.status===200)
        {
        var counter=request.responseText;
-       var count=JSON.parse(counter);
+       var count=counter.value;
    var span=document.getElementById('count');
 span.innerHTML=counter.toString();
 
@@ -36,4 +36,7 @@ request.open('GET','http://praveen94.imad.hasura-app.io/counter',true);
 request.send(null);
    
  };
+ 
+// var commentIn=document.getElementById('comment');
+ //var comment=commentIn.value
     
