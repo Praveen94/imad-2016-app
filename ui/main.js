@@ -1,65 +1,11 @@
-//console.log('Loaded!');
+console.log('Loaded!');
+var counter=0;
 var button=document.getElementById('counter');
-//var like=document.getElementById('like');
-//button.onclick=function(){
-//like.innerHTML="Liked";    
 
-    
-//};
-
-
-//submit name
-
-var submit=document.getElementById('submit-btn');
-submit.onclick=function()
+button.onclick=function()
 {
-var nameInput=document.getElementById('name');
-var name=nameInput.value;
- var request=new XMLHttpRequest();
-  request.onreadystatechange=function()
-  {
-      if(request.readyState===XMLHttpRequest.DONE)
-  {
-    if(request.status===200)
-    {
-     var names=request.responseText;
-    names=JSON.parse(names);
-    var list='';
-for(var i=0;i<names.length;i++)
-{
-    list+="<li>"+names[i]+"</li>";
-}
-var ul=document.getElementById('namelist');
-ul.innerHTML=list;
-
-    }
-  }
-  };
-  };
-  
-  
-  
-  
-  
-  
-//    counter+=1;
-
-//request.open('GET','http://praveen94.imad.hasura-app.io/submit_name?name='+name,true);    
-//request.send(null);
-    
-//};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    counter+=1;
+var span=document.getElementById('count');
+span.innerHTML=counter.toString();
+};
 
