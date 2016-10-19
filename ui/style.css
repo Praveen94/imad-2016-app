@@ -33,5 +33,5 @@ body {
 }
 
 #counter{
-length:20px    
+max-width:20px   
 }
