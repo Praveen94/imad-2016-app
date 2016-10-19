@@ -37,7 +37,10 @@ app.get('/article-three',function(req,res){
 var counter=0;
 app.get('/counter',function(req,res){
     counter+=1;
+    
     res.send(counter.toString());
+return counter;
+    
 });
 
 app.get('/ui/main.js', function (req, res) {
