@@ -14,11 +14,11 @@ button.onclick=function()
        if(request.status===200)
        {
        var counter=request.responseText;
-       
+       var count=JSON.parse(counter);
    var span=document.getElementById('count');
 span.innerHTML=counter.toString();
 
-if(counter%2===0)
+if(count%2===0)
 {
 button.innerHTML="Like";
 button.style.width="50px";
