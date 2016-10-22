@@ -1,5 +1,16 @@
 console.log('Loaded!');
-var button=document.getElementById('counter');
+var img=document.getElementById('madi');
+img.onclick=function()
+{
+    img.style.marginLeft='100px';
+};
+
+
+
+
+
+
+/*var button=document.getElementById('counter');
 
 button.onclick=function()
 {
@@ -40,3 +51,4 @@ request.send(null);
 // var commentIn=document.getElementById('comment');
  //var comment=commentIn.value
     
+*/
