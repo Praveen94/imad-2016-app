@@ -16,11 +16,11 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-app.use(bodyParser.json());
+/*app.use(bodyParser.json());
 app.use(session({
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
-}));
+}));*/
 
 function createTemplate (data) {
     var title = data.title;
@@ -72,7 +72,7 @@ app.get('/', function (req, res) {
 });
 
 
-function hash (input, salt) {
+/*function hash (input, salt) {
     // How do we create a hash?
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
     return ["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
@@ -209,7 +209,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
     } else {
         res.status(403).send('Only logged in users can comment');
     }
-});
+});*/
 
 app.get('/articles/:articleName', function (req, res) {
   // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
