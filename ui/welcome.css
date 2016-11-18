@@ -1,1 +1,31 @@
 
+#main1 h1#sub1{
+float:left;
+margin:100px auto;
+padding-top:100px;
+}
+
+#main1 h1#sub1:hover{
+color:#5D00FF;
+
+}
+
+#main1 h1#sub2{
+float:left;
+margin:100px auto;
+}
+
+
+#main1 h1#sub2:hover{
+color:#0072FF
+
+}
+
+#main1 h1#sub3{
+float:left;
+margin:100px auto;
+
+}
+#main1 h1#sub3:hover{
+color:red
+}
