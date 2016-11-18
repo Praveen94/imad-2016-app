@@ -155,7 +155,7 @@ app.post('/login', function (req, res) {
 
 
 
-/*app.get('/check-login', function (req, res) {
+app.get('/check-login', function (req, res) {
    if (req.session && req.session.auth && req.session.auth.userId) {
        // Load the user object
        pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
@@ -230,7 +230,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
     } else {
         res.status(403).send('Only logged in users can comment');
     }
-});*/
+});
 app.get('/articles/:articleName',function(req,res)
 {
 pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
