@@ -1,4 +1,4 @@
-/*function loadLoginForm () {
+function loadLoginForm () {
     var loginHtml = `
         <h3>Login/Register to unlock awesome features</h3>
         <input type="text" id="username" placeholder="username" />
@@ -135,4 +135,4 @@ function loadArticles () {
 loadLogin();
 
 // Now this is something that we could have directly done on the server-side using templating too!
-loadArticles();*/
+loadArticles();
