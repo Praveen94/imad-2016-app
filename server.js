@@ -249,6 +249,11 @@ pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], f
  });
 });
 
+
+app.get('/login.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'login.html'));
+});
+
 app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
