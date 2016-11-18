@@ -90,7 +90,7 @@ app.get('/', function (req, res) {
 });
 
 
-/*function hash (input, salt) {
+function hash (input, salt) {
     // How do we create a hash?
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
     return ["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
@@ -102,7 +102,7 @@ app.get('/hash/:input', function(req, res) {
    res.send(hashedString);
 });
 
-app.post('/create-user', function (req, res) {
+/*app.post('/create-user', function (req, res) {
    // username, password
    // {"username": "tanmai", "password": "password"}
    // JSON
@@ -150,9 +150,29 @@ app.post('/login', function (req, res) {
           }
       }
    });
+});*/
+
+app.post('/create-user',function(req,res)
+{
+var username=req.body.username;
+var password=req.body.password;
+var salt=crypto.randomBytes(128).toString();
+var dbString=hash(password,salt);
+    pool.query('INSERT INTO "user"(username,password) VALUES($1,$2)',[username,dbString],function(err,result)
+    {
+    if(err){
+        res.status(500).send(err.toString());
+    }
+    else
+     {
+         res.send("User Successfully created:"+username);
+     }
+    });    
 });
 
-app.get('/check-login', function (req, res) {
+
+
+/*app.get('/check-login', function (req, res) {
    if (req.session && req.session.auth && req.session.auth.userId) {
        // Load the user object
        pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
