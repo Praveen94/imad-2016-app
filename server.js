@@ -228,7 +228,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });*/
-app.get('articles/:articleName',function(req,res)
+app.get('/articles/:articleName',function(req,res)
 {
 pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
     if (err) {
