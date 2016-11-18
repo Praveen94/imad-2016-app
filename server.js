@@ -228,9 +228,9 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });*/
-app.get('articles/:articleName',function(req,res)
-{
-pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
+app.get('/articles/:articleName', function (req, res) {
+  // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
+  pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {
@@ -240,11 +240,10 @@ pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], f
             var articleData = result.rows[0];
             res.send(createTemplate(articleData));
         }
-        
     }
-
- });
+  });
 });
+
 
 app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
