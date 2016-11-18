@@ -69,7 +69,21 @@ function createTemplate (data) {
     return htmlTemplate;
 }
 
-app.get('/test-db')
+var pool=new Pool(config);
+app.get('/test-db',function(req,res)
+{
+   pool.query('SELECT * FROM test',function(err,result)
+   {
+       if(err)
+       {
+       res.status(500).send(err.toString());
+   }
+   else{
+   res.send(JSON.stringify(result));
+}
+    
+   });    
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
