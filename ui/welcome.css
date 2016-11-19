@@ -1,7 +1,7 @@
 
 #main1 h1#sub1{
 /*float:left;*/
-margin:100px auto 0px auto;
+margin:100px auto 0 auto;
 padding-top:100px;
 }
 
@@ -12,7 +12,7 @@ color:#5D00FF;
 
 #main1 h1#sub2{
 /*float:left;*/
-margin:80px auto;
+margin:80px auto 0 auto;
 }
 
 
@@ -23,7 +23,7 @@ color:#0072FF
 
 #main1 h1#sub3{
 /*float:left;*/
-margin:90px auto;
+margin:90px auto 0 auto;
 
 }
 #main1 h1#sub3:hover{
