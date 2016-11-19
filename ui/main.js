@@ -1,5 +1,6 @@
 function loadLoginForm () {
     var loginHtml = `
+       <h2><center><u>Register & Login</u></center></h2>
        <form>
   <div class="imgcontainer">
     <img src="/ui/img_avatar3.png" alt="Avatar" class="avatar">
