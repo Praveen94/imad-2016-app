@@ -22,8 +22,6 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
 
-
-
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
@@ -68,22 +66,6 @@ function createTemplate (data) {
     `;
     return htmlTemplate;
 }
-
-var pool=new Pool(config);
-app.get('/test-db',function(req,res)
-{
-   pool.query('SELECT * FROM test',function(err,result)
-   {
-       if(err)
-       {
-       res.status(500).send(err.toString());
-   }
-   else{
-   res.send(JSON.stringify(result.rows));//.rows return just an array of objects
-}
-    
-   });    
-});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -151,9 +133,6 @@ app.post('/login', function (req, res) {
       }
    });
 });
-
-
-
 
 app.get('/check-login', function (req, res) {
    if (req.session && req.session.auth && req.session.auth.userId) {
@@ -231,9 +210,10 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });
-app.get('/articles/:articleName',function(req,res)
-{
-pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
+
+app.get('/articles/:articleName', function (req, res) {
+  // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
+  pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {
@@ -243,15 +223,8 @@ pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], f
             var articleData = result.rows[0];
             res.send(createTemplate(articleData));
         }
-        
     }
-
- });
-});
-
-
-app.get('/login.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'login.html'));
+  });
 });
 
 app.get('/ui/:fileName', function (req, res) {
