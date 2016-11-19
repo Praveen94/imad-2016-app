@@ -8,10 +8,10 @@ function loadLoginForm () {
 
   <div class="container">
     <label><b>Username</b></label>
-    <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+    <input type="text" id="username" placeholder="Enter Username"  required>
 
     <label><b>Password</b></label>
-    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id="password" placeholder="Enter Password"  required>
         
     <button type="submit" id="login_btn" value="Login">Login</button>
      <button type="submit" id="register_btn" value="Register">Register</button>
