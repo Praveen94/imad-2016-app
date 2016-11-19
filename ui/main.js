@@ -1,6 +1,6 @@
 function loadLoginForm () {
     var loginHtml = `
-      <form>
+     
   <div class="imgcontainer">
     <img src="img_avatar3.png" alt="Avatar" class="avatar">
   </div>
@@ -18,7 +18,7 @@ function loadLoginForm () {
   
 </div>
 
-  </form>
+  
         `;
     document.getElementById('login_area').innerHTML = loginHtml;
     
