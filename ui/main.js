@@ -2,7 +2,7 @@ function loadLoginForm () {
     var loginHtml = `
      
   <div class="imgcontainer">
-    <img src="img_avatar3.png" alt="Avatar" class="avatar">
+    <img src="/ui/img_avatar3.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
