@@ -1,20 +1,20 @@
 function loadLoginForm () {
     var loginHtml = `
-       <form action="action_page.php">
+      <form>
   <div class="imgcontainer">
     <img src="img_avatar3.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
     <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" id="username" placeholder="username" required /> 
 
     <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id="password" placeholder="Password" required />
 
-    <button type="submit">Login</button>
- <button type="submit">Register</button>    
-<input type="checkbox" checked="checked"> Remember me
+    <input type="submit" id="login_btn" value="Login" />
+ <input type="submit" id="register_btn" value="Register" />    
+
   
 </div>
 
