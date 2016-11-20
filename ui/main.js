@@ -161,8 +161,47 @@ function write_article()
     `;
     document.getElementById('write_article').innerHTML=submitArticle;
     
+   var submit=document.getElementById('art_submit');
+   submit.onclick=function()
+   {
+       var request=new XMLHttpRequest();
+       request.onreadystatechange=function()
+       {
+        if(request.readyState==4)
+        {
+        submit.value='Posted';
+        }
+        else{
+        alert("Post unsucessfull");
+            }
+        };
+       var title=document.getElementById('art_title').value;    
+       var date=document.getElementById('art_date').value;
+       var heading=document.getElementById('art_heading').value;
+       var content=document.getElementById('art_content').value;
+       request.open('POST','/submit_article',true);
+       request.setRequestHeader('Content-Type', 'application/json');
+       request.send(JSON.stringify({title:title,date:date,heading:heading,content:content}));
+        submit.value = 'Posting...';
+       
+   };
+       
+           
+           
+       }
+       
+   
+       
+       
+       
+   
+   
     
-}
+    
+
+   
+   
+
 
 
 // The first thing to do is to check if the user is logged in!
