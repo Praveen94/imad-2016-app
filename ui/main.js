@@ -171,7 +171,9 @@ function write_article()
         {
         submit.value='Posted';
         }
-       
+       else{
+        alert("Post unsucessfull");
+            }
         };
        var title=document.getElementById('art_title').value;    
        var date=document.getElementById('art_date').value;
