@@ -7,11 +7,11 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 
 var config = {
-    user: 'praveen94',
-    database: 'praveen94',
-    host: 'db.imad.hasura-app.io',
+    user: 'root',
+    database: 'IMAD',
+    host: '192.168.1.6',
     port: '5432',
-    password:process.env.DB_PASSWORD
+    password:'year2012$'
 };
 
 var app = express();
@@ -231,9 +231,6 @@ app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
 
-app.get('/profile', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
-});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
