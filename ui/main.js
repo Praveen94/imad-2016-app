@@ -143,6 +143,26 @@ function loadArticles () {
     request.send(null);
 }
 
+function write_article()
+{
+    var submitArticle=`
+    <h3>Write an article</h3>
+    <br />
+    <p>Title:<input type="text" id="art_title" placeholder="title" /></p>
+    <br />
+    <p>Date:<input type="text" id="art_date" placeholder="date" /></p>
+    <br />
+    <p>Heading:<input type="text" id="art_heading" placeholder="heading" /></p>
+    <br />
+    <p>Content:<input type="content" id="art_content" placeholder="content" /></p>
+    <br />
+    <input type="submit" id="art_submit" value="Submit" />
+    `;
+    document.getElementById('write_article').innerHTML=submitArticle;
+    
+    
+}
+
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
