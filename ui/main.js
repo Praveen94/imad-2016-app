@@ -107,6 +107,7 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
+                write_article();
             } else {
                 loadLoginForm();
             }
@@ -166,7 +167,7 @@ function write_article()
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
-write_article();
+
 // Now this is something that we could have directly done on the server-side using templating too!
 loadArticles();
 
