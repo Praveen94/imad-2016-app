@@ -229,6 +229,23 @@ app.get('/articles/:articleName', function (req, res) {
   });
 });
 
+app.post('/submit_article',function(req,res){
+    var title=req.body.title;
+    var date=req.body.date;
+    var heading=req.body.heading;
+    var content=req.body.content;
+    pool.query('INSERT INTO article(title,heading,date,content) VALUES($1,$2,$3,$4)',[title,heading,date,content],function(err,result){
+    if(err)
+    {
+       res.status(500).send(err.toString());
+    }
+else{
+    res.send('Article posted sucessfully');
+}
+});
+});
+
+
 app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
