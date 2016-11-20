@@ -155,7 +155,10 @@ function write_article()
     <br />
     <p>Heading:<input type="text" id="art_heading" placeholder="heading" /></p>
     <br />
-    <p>Content:<input type="content" id="art_content" placeholder="content" /></p>
+    <div class="form-group">
+      <label for="content">Content:</label>
+      <textarea class="form-control" rows="5" id="art-content" placeholder="content"></textarea>
+    </div>
     <br />
     <input type="submit" id="art_submit" value="Submit" />
     `;
