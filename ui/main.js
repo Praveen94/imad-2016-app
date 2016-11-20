@@ -149,7 +149,7 @@ function write_article()
     var submitArticle=`
     <h3>Write an article</h3>
     <br />
-    <p>Title:&nbsp;&nbsp;<input type="text" id="art_title" placeholder="title" /></p>
+    <p>Title:</p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="art_title" placeholder="title" />
     <br />
     <p>Date:<input type="text" id="art_date" placeholder="date" /></p>
     <br />
