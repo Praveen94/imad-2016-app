@@ -1,1 +1,9 @@
 
+#section2 {padding-top:50px;height:800px;
+		font-family: arial,sans-serif;
+	background-image: url(beachside.jpg);
+	background-position:center;
+	background-repeat: no repeat;
+	background-attachment: fixed;
+	background-size:cover;		
+		}
