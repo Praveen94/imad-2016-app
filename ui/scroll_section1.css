@@ -1,1 +1,7 @@
-
+#section1 {padding-top:50px;height:800px;
+		font-family: arial,sans-serif;
+	background-color:blue;
+	background-position:center;
+	background-repeat: no repeat;
+	background-attachment: fixed;
+	background-size:cover;}
