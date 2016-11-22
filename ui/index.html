@@ -10,19 +10,47 @@
 <link rel="stylesheet" type="text/css" href="/ui/section2.css"> 
     
     </head>
-    <body>
-       
-        
+   
+       <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">My Blog</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Login</a></li>
+          <li><a href="#section2">Articles</a></li>
+            <li><a href="#section3">Write Article</a></li>        
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+        <div id="section1" class="container-fluid">
+ 
             <div id="login_area">
                 <center>Loading login status...</center>
             </div>
-            <hr/>
+            </div>
+           
+           <div id="section2" class="container-fluid">
+ 
             <h3>My Articles</h3>
             <div id="articles">
                 <center>Loading articles...</center>
-            </div>
+            </div></div>
+           <div id="section3" class="container-fluid">
+ 
             <div id="write_article">
-            </div>
+            </div></div>
         
         <script type="text/javascript" src="/ui/main.js">
         </script>
