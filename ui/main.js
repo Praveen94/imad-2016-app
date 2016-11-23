@@ -194,7 +194,7 @@ function write_article()
 function nowrite()
 {
  var nowrite=  `<h3>Login to write article</h3>
- <img id="nowrite" src="/ui/traffic.gif" alt="Sorry"/>
+ <img id="nowrite" src="/ui/bean.gif" alt="Sorry"/>
  
  
  
