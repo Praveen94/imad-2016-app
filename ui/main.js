@@ -193,7 +193,12 @@ function write_article()
        
 function nowrite()
 {
- var nowrite=  `<h3>Login to write article</h3>`;
+ var nowrite=  `<h3>Login to write article</h3>
+ <img src="/ui/madi.png" alt="Sorry"/>
+ 
+ 
+ 
+ `;
   document.getElementById('write_article').innerHTML=nowrite;
 }
     
