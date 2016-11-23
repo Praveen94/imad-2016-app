@@ -146,7 +146,7 @@ function loadArticles () {
     </div>`
                 ;
                
-                for (var i=0; i< articleData.length; i++) {
+                for (var i=1; i< articleData.length; i++) {
                     content += `<div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
