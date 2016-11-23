@@ -139,7 +139,7 @@ function loadArticles () {
         </h4>
       </div>
       <div id="collapse${[i]}" class="panel-collapse collapse in">
-        <div class="panel-body">${articleData[i].heading}</div>
+        <div class="panel-body">Hello</div>
       </div>
     </div>`;
                 }
