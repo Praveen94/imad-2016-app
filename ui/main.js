@@ -127,14 +127,23 @@ function loadArticles () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var articles = document.getElementById('articles');
             if (request.status === 200) {
-                var content = '<ul>';
+                var content = '';
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                    content += `<li>
-                    <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li>`;
+                    content += `<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          
+
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse${[i]}">${articleData[i].heading}</a>
+        </h4>
+      </div>
+      <div id="collapse${[i]}" class="panel-collapse collapse in">
+        <div class="panel-body">${articleData[i].content}</div>
+      </div>
+    </div>`;
                 }
-                content += "</ul>"
+                
                 articles.innerHTML = content;
             } else {
                 articles.innerHTML('Oops! Could not load all articles!')
