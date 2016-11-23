@@ -127,7 +127,10 @@ function loadArticles () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var articles = document.getElementById('articles');
             if (request.status === 200) {
-                var content = '';
+                var content = `
+                <div class="container">
+                <div class="panel-group" id="accordion">`
+                ;
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
                     content += `<div class="panel panel-default">
@@ -143,6 +146,8 @@ function loadArticles () {
       </div>
     </div>`;
                 }
+                
+                content+=" </div></div>"
                 
                 articles.innerHTML = content;
             } else {
