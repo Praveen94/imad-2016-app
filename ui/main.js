@@ -127,11 +127,25 @@ function loadArticles () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var articles = document.getElementById('articles');
             if (request.status === 200) {
+               
+                var articleData = JSON.parse(this.responseText);
                 var content = `
                 <div class="container">
-                <div class="panel-group" id="accordion">`
+                <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          
+
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse${[0]}">${articleData[0].heading}</a>
+        </h4>
+      </div>
+      <div id="collapse${[0]}" class="panel-collapse collapse in">
+        <div class="panel-body">${articleData[0].heading}</div>
+      </div>
+    </div>`
                 ;
-                var articleData = JSON.parse(this.responseText);
+               
                 for (var i=0; i< articleData.length; i++) {
                     content += `<div class="panel panel-default">
       <div class="panel-heading">
@@ -141,7 +155,7 @@ function loadArticles () {
 <a data-toggle="collapse" data-parent="#accordion" href="#collapse${[i]}">${articleData[i].heading}</a>
         </h4>
       </div>
-      <div id="collapse${[i]}" class="panel-collapse collapse in">
+      <div id="collapse${[i]}" class="panel-collapse collapse">
         <div class="panel-body">${articleData[i].heading}</div>
       </div>
     </div>`;
