@@ -11,7 +11,7 @@ function loadLoginForm () {
 
     <label><b>Password</b></label>
     <input type="password" id="password" placeholder="Password" required />
-
+<br /><br />
     <button type="submit" id="login_btn">Login</button> 
 <br /><br />
  <button type="submit" id="register_btn">Register</button>
