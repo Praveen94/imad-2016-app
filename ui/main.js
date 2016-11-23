@@ -193,7 +193,7 @@ function write_article()
        
 function nowrite()
 {
- var nowrite=  `<h3>Login to write article</h3>
+ var nowrite=  `<h3>Oops!!!You don't seem to be logged in.</h3>
  <img id="nowrite" src="/ui/bean.gif" alt="Sorry"/>
  
  
