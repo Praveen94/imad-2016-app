@@ -73,8 +73,8 @@ button.btn-primary {
     
 }
 input[type="text"].art_content{
-line-height:50px;
-
+line-height:100px;
+padding: 20px 10px;
     
     
 }
