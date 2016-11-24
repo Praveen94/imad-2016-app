@@ -168,7 +168,15 @@ function loadArticles () {
         </h4>
       </div>
       <div id="collapse${[i]}" class="panel-collapse collapse">
-        <div class="panel-body">${articleData[i].heading}</div>
+        <div class="panel-body">${articleData[i].heading}
+         <hr/>
+              <h4>Comments</h4>
+              <div id="comment_form">
+              </div>
+              <div id="comments">
+                <center>Loading comments...</center>
+              </div>
+        </div>
       </div>
     </div>`;
                 }
