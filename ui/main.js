@@ -144,7 +144,7 @@ function loadArticles () {
         <div class="panel-body">${articleData[0].content}
         <br />
         <br />
-        <p>Hi</p>
+        <a href="articles/${articleData[0].title}"><button>View/Submit Comments</button></a>
         
         
         
