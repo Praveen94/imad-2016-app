@@ -154,6 +154,7 @@ function loadArticles () {
         
         </div>
       </div>
+    <script type="text/javascript" src="/ui/article.js"></script>
     </div>`
                 ;
                
