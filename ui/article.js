@@ -10,7 +10,7 @@ function loadCommentForm () {
         <input type="submit" id="submit" value="Submit" />
         <br/>
         `;
-    document.getElementById('comment_form').innerHTML = commentFormHtml;
+    document.getElementByClassName('comment_form').innerHTML = commentFormHtml;
     
     // Submit username/password to login
     var submit = document.getElementById('submit');
@@ -71,7 +71,7 @@ function loadComments () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            var comments = document.getElementById('comments');
+            var comments = document.getElementByClassName('comments');
             if (request.status === 200) {
                 var content = '';
                 var commentsData = JSON.parse(this.responseText);
