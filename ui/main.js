@@ -167,7 +167,7 @@ function loadArticles () {
         <div class="panel-body">${articleData[i].content}
           <br />
         <br />
-        <a href="articles/${articleData[i].title}"><button class="comment_btn">View/Submit Comments</button></a>
+        <a href="articles/${articleData[i].title}"><button class="btn btn-primary">View/Submit Comments</button></a>
         </div>
       </div>
     </div>`;
