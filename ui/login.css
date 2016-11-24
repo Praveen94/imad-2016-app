@@ -19,7 +19,7 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 60%;
+    width: 50%;
 }
 
 .cancelbtn {
@@ -68,7 +68,7 @@ button.btn-primary {
     color: #fff!important;
     background-color: black!important;
     border-color: white!important;
-    width: 15%!important;
+    width:50%!important;
     
     
 }
