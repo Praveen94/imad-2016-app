@@ -165,7 +165,9 @@ function loadArticles () {
       </div>
       <div id="collapse${[i]}" class="panel-collapse collapse">
         <div class="panel-body">${articleData[i].content}
-         
+          <br />
+        <br />
+        <a href="articles/${articleData[0].title}"><button>View/Submit Comments</button></a>
         </div>
       </div>
     </div>`;
