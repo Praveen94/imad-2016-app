@@ -72,7 +72,7 @@ button.btn-primary {
     
     
 }
-.art_content{
+input[type="text"].art_content{
 height:50px;
 
     
