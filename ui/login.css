@@ -64,8 +64,11 @@ span.psw {
   width: 25%;
  
 }
-.btn-primary {
+button.btn-primary {
     color: #fff!important;
     background-color: black!important;
     border-color: white!important;
+    width: 25%!important;
+    
+    
 }
