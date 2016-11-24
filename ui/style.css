@@ -39,7 +39,7 @@ body {
     font-size: 0.8em;
 }
 
-#comment_form {
+.comment_form {
     margin-left: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
