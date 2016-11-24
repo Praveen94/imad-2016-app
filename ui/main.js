@@ -141,14 +141,8 @@ function loadArticles () {
         </h4>
       </div>
       <div id="collapse${[0]}" class="panel-collapse collapse in">
-        <div class="panel-body">${articleData[0].heading}
-        <hr/>
-              <h4>Comments</h4>
-              <div class="comment_form">
-              </div>
-              <div class="comments">
-                <center>Loading comments...</center>
-              </div>
+        <div class="panel-body">${articleData[0].content}
+        
         
         
         
@@ -168,14 +162,8 @@ function loadArticles () {
         </h4>
       </div>
       <div id="collapse${[i]}" class="panel-collapse collapse">
-        <div class="panel-body">${articleData[i].heading}
-         <hr/>
-              <h4>Comments</h4>
-              <div class="comment_form">
-              </div>
-              <div class="comments">
-                <center>Loading comments...</center>
-              </div>
+        <div class="panel-body">${articleData[i].content}
+         
         </div>
       </div>
     </div>`;
