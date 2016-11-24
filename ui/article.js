@@ -10,11 +10,10 @@ function loadCommentForm () {
         <input type="submit" id="submit" value="Submit" />
         <br/>
         `;
-    document.getElementsByClassName('comment_form').innerHTML = commentFormHtml;
+    document.getElementById('comment_form').innerHTML = commentFormHtml;
     
     // Submit username/password to login
     var submit = document.getElementById('submit');
-    window.onload=function(){
     submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
@@ -42,9 +41,7 @@ function loadCommentForm () {
         submit.value = 'Submitting...';
         
     };
-};
 }
-
 
 function loadLogin () {
     // Check if the user is already logged in
@@ -74,7 +71,7 @@ function loadComments () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            var comments = document.getElementsByClassName('comments');
+            var comments = document.getElementById('comments');
             if (request.status === 200) {
                 var content = '';
                 var commentsData = JSON.parse(this.responseText);
