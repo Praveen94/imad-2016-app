@@ -72,9 +72,14 @@ button.btn-primary {
     
     
 }
-input[type="text"].art_content{
-line-height:100px;
-padding: 500px 100px;
+input[type="submit"]{
+background-color:#F4359B;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 35%;
     
     
 }
