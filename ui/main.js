@@ -197,7 +197,8 @@ function write_article()
     <br />
     <p>Heading:<input type="text" id="art_heading" placeholder="heading" /></p>
     <br />
-    <p>Content:<input type="text" id="art_content" placeholder="content" /></p>
+    <p>Content:<textarea rows="4" cols="50" id="art_content" placeholder="content">
+Enter text here...</textarea></p>
     <br />
     <input type="submit" id="art_submit" value="Submit" />
     `;
