@@ -10,7 +10,7 @@ function loadCommentForm () {
         <input type="submit" id="submit" value="Submit" />
         <br/>
         `;
-    document.getElementByClassName('comment_form').innerHTML = commentFormHtml;
+    document.getElementsByClassName('comment_form').innerHTML = commentFormHtml;
     
     // Submit username/password to login
     var submit = document.getElementById('submit');
