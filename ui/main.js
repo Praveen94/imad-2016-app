@@ -144,7 +144,7 @@ function loadArticles () {
         <div class="panel-body">${articleData[0].content}
         <br />
         <br />
-        <a href="articles/${articleData[0].title}"><button type="button" class="btn btn-primary">Primary</button></a>
+        <a href="articles/${articleData[0].title}"><button class="btn btn-primary">Primary</button></a>
         
         
         
