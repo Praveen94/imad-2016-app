@@ -71,7 +71,7 @@ function loadComments () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            var comments = document.getElementByClassName('comments');
+            var comments = document.getElementsByClassName('comments');
             if (request.status === 200) {
                 var content = '';
                 var commentsData = JSON.parse(this.responseText);
