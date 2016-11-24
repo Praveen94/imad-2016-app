@@ -57,3 +57,10 @@ span.psw {
        width: 100%;
     }
 }
+
+.comment_btn{
+  background-color:black;
+  color:white;
+  width: 25%;
+ 
+}
