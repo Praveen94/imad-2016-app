@@ -144,9 +144,9 @@ function loadArticles () {
         <div class="panel-body">${articleData[0].heading}
         <hr/>
               <h4>Comments</h4>
-              <div id="comment_form">
+              <div class="comment_form">
               </div>
-              <div id="comments">
+              <div class="comments">
                 <center>Loading comments...</center>
               </div>
         
@@ -171,9 +171,9 @@ function loadArticles () {
         <div class="panel-body">${articleData[i].heading}
          <hr/>
               <h4>Comments</h4>
-              <div id="comment_form">
+              <div class="comment_form">
               </div>
-              <div id="comments">
+              <div class="comments">
                 <center>Loading comments...</center>
               </div>
         </div>
