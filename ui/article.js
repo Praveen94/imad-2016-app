@@ -14,6 +14,7 @@ function loadCommentForm () {
     
     // Submit username/password to login
     var submit = document.getElementById('submit');
+    window.onload=function(){
     submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
@@ -41,7 +42,9 @@ function loadCommentForm () {
         submit.value = 'Submitting...';
         
     };
+};
 }
+
 
 function loadLogin () {
     // Check if the user is already logged in
