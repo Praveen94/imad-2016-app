@@ -99,7 +99,7 @@ function loadLoggedInUser (username) {
         <a href="/logout">Logout</a>
         
         <h3><center>You have Logged In!!!</center></h3>
-    <img id="login_img" src="/smile.png" />
+    <img id="login_img" src="/ui/smile.png" />
     
     
     `;
