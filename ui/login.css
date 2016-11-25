@@ -61,14 +61,14 @@ span.psw {
 .comment_btn{
   background-color:black;
   color:white;
-  width: 25%;
+  /*width: 25%;*/
  
 }
 button.btn-primary {
     
     background-color:#00A1FF!important;
     border-color: white!important;
-    width:100%!important;
+   /* width:100%!important;*/
     
     
 }
@@ -79,7 +79,7 @@ background-color:#F4359B;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 35%;
+    /*width: 35%;*/
     
     
 }
