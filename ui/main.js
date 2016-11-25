@@ -34,7 +34,7 @@ function loadLoginForm () {
           if (request.readyState === XMLHttpRequest.DONE) {
               // Take some action
               if (request.status === 200) {
-                  submit.value = 'Sucess!';
+                 alert("Sucess!");
               } else if (request.status === 403) {
                   alert("Invalid credentials. Try again?");
               } else if (request.status === 500) {
