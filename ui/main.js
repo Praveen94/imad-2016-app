@@ -199,7 +199,7 @@ function write_article()
     <br />
     <p>Title:<input type="text" id="art_title" placeholder="title" /></p>
     <br />
-    <p>Date:<input type="text" id="art_date" placeholder="date" /></p>
+    <p>Date:<input type="text" id="art_date" placeholder="YYYY-MM-DD" /></p>
     <br />
     <p>Heading:<input type="text" id="art_heading" placeholder="heading" /></p>
     <br />
