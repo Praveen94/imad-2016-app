@@ -96,7 +96,9 @@ function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
         <h3> Hi <i>${username}</i></h3>
-        <a href="/logout"><button type="button">LogOut</button></a>
+        <a href="/logout"><button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </button></a>
         
         <h3><center>You have Logged In!!!</center></h3>
     <img id="login_img" src="/ui/smile.png" />
