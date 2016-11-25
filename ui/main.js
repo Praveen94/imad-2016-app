@@ -46,14 +46,13 @@ function loadLoginForm () {
               }
               loadLogin();
           }  
-          // Not done yet
+          
         };
         
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
+        
         request.open('POST', '/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
@@ -253,10 +252,7 @@ function nowrite()
 
 
 
-// The first thing to do is to check if the user is logged in!
 loadLogin();
 
-// Now this is something that we could have directly done on the server-side using templating too!
 loadArticles();
 
-//write_article();
