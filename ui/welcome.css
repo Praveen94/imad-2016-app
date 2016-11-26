@@ -10,7 +10,7 @@ center p#main{
   animation: type 4s steps(60, end); 
 }
 
-center#main p:nth-child(2){
+center p#main :nth-child(2){
   animation: type2 8s steps(60, end);
 }
 
