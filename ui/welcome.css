@@ -1,5 +1,5 @@
 
-#main center p{
+center p#main{
   color: red; 
   font-family: "Courier";
   font-size: 20px;
@@ -10,11 +10,11 @@
   animation: type 4s steps(60, end); 
 }
 
-#main center p:nth-child(2){
+center#main p:nth-child(2){
   animation: type2 8s steps(60, end);
 }
 
-#main center p span{
+center p span#main{
   animation: blink 1s infinite;
 }
 
