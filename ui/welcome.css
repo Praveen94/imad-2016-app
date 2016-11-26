@@ -1,6 +1,7 @@
 
 .main1 p{
-  color: black; 
+  color: white; 
+  background-color:purple;
   font-family: "Courier";
   font-size: 30px;
   /*margin: 10px 0 0 10px;*/
