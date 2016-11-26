@@ -95,11 +95,11 @@ function loadLoginForm () {
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
-    <br /><b /><br />
+    <br /><br /><br /><br /><br /><br />
     <a href="/logout"><button type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </button></a>
-     <br /><b /><br /> <center>  <h2><u>Welcome <i>${username}</i></u></h2> </center>
+      <center>  <h2><u>Welcome <i>${username}</i></u></h2> </center>
         
         
         <br/><br/><br/>
