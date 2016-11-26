@@ -10,9 +10,9 @@
   animation: type 4s steps(60, end); 
 }
 
-.main1 p:nth-child(2){
+/*.main1 p:nth-child(2){
   animation: type2 8s steps(60, end);
-}
+}*/
 .main1 span{
   animation: blink 1s infinite;
 }
