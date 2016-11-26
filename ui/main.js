@@ -100,6 +100,7 @@ function loadLoggedInUser (username) {
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </button></a>
         
+        <br/><br/><br/>
         <h3><center>You have Logged In!!!</center></h3>
     <img id="login_img" src="/ui/smile.png" />
     
