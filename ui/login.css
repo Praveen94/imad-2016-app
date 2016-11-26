@@ -13,9 +13,9 @@ input[type=text], input[type=password] {
 }
 
 .btn-default {
-    color: whitesmoke;
-    background-color: #31C7ED;
-    border-color: #ccc;
+    color: whitesmoke!important;
+    background-color: #31C7ED!important;
+    border-color: #ccc!important;
 }
 button {
     background-color:#F4359B;
