@@ -3,9 +3,9 @@
   color: black; 
   font-family: "Courier";
   font-size: 30px;
-  margin: 10px 0 0 10px;
+  /*margin: 10px 0 0 10px;*/
   white-space: nowrap;
-  overflow: hidden;
+ /* overflow: hidden;*/
   width: 30em;
   animation: type 4s steps(60, end); 
 }
