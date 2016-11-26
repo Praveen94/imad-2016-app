@@ -1,5 +1,5 @@
 
-center p#welcome{
+p#welcome{
   color: red; 
   font-family: "Courier";
   font-size: 20px;
@@ -10,11 +10,10 @@ center p#welcome{
   animation: type 4s steps(60, end); 
 }
 
-center p#welcome :nth-child(2){
+p#welcome :nth-child(2){
   animation: type2 8s steps(60, end);
 }
-
-center p span#welcome{
+span#welcome{
   animation: blink 1s infinite;
 }
 
