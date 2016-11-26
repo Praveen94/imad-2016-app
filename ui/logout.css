@@ -1,1 +1,13 @@
 
+body
+{
+    background-image:url(/ui/sunshine.gif);
+    	height:1050px;
+		color: #fff; 
+		
+		background-position:center;
+	background-repeat: no repeat;
+	background-attachment: fixed;
+	background-size:cover;
+    
+}
