@@ -14,7 +14,7 @@
   animation: type2 8s steps(60, end);
 }
 
-#main center span{
+#main center p span{
   animation: blink 1s infinite;
 }
 
