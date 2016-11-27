@@ -12,9 +12,9 @@ function loadLoginForm () {
     <label><b>Password</b></label>
     <input type="password" id="password" placeholder="Password" required />
 <br /><br />
-    <button onclick="validateForm()" type="submit" id="login_btn">Login</button> 
+    <button type="submit" id="login_btn">Login</button> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <button onclick="validateForm()" type="submit" id="register_btn">Register</button>
+ <button type="submit" id="register_btn">Register</button>
 
   
 </div>
@@ -26,6 +26,9 @@ function loadLoginForm () {
     //// Submit username/password to login
     var submit = document.getElementById('login_btn');
     submit.onclick = function () {
+        validateForm();
+        
+        
         // Create a request object
         var request = new XMLHttpRequest();
         
