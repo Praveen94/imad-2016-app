@@ -1,9 +1,9 @@
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-    background-color: sandybrown;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    font-size: 14px!important;
+    line-height: 1.42857143!important;
+    color: #333!important;
+    background-color: sandybrown!important;
     
 	/*background-image:url(/ui/flower2.jpg);
 	background-position:center;
