@@ -275,7 +275,7 @@ app.post('/submit_article',function(req,res){
     var date=req.body.date;
     var heading=req.body.heading;
     var content=req.body.content;
-    pool.query('INSERT INTO article(title,heading,date,content,user_name) VALUES($1,$2,$3,$4,$5)',[title,heading,date,content,user_name],function(err,result){
+    pool.query('INSERT INTO article(title,heading,date,content) VALUES($1,$2,$3,$4,$5)',[title,heading,date,content],function(err,result){
     if(err)
     {
        res.status(500).send(err.toString());
