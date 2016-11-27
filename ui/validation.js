@@ -1,9 +1,7 @@
 function validateForm() {
-    var a = document.forms["register"]["name"].value;
-    var b = document.forms["register"]["address"].value;	    
-    var c = document.forms["register"]["nationality"].value;
-    var d = document.forms["register"]["mail"].value;
-   
+    var a = document.getElementById('username').value;
+    var b = document.getElementById('password').value;	    
+    
     
 if (a == null || a == "") {
         alert("Please fill the name");
@@ -11,17 +9,8 @@ if (a == null || a == "") {
 }
 else if(b ==null || b =="")   
  {
-        alert("Please fill the address");
+        alert("Please enter the password");
 	return false;
 }
-else if(c ==null || c =="")   
- {
-        alert("Please fill the nationality");
-	return false;
-}
-else if(d ==null || d =="")   
- {
-        alert("Please provide the mail-id");
-	return false;
-}
+
 }
