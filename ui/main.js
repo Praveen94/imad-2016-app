@@ -237,9 +237,10 @@ function write_article()
        var date=document.getElementById('art_date').value;
        var heading=document.getElementById('art_heading').value;
        var content=document.getElementById('art_content').value;
+       var user_name =document.getElementById('username').value;
        request.open('POST','/submit_article',true);
        request.setRequestHeader('Content-Type', 'application/json');
-       request.send(JSON.stringify({title:title,date:date,heading:heading,content:content}));
+       request.send(JSON.stringify({title:title,date:date,heading:heading,content:content,user_name:user_name}));
         submit.value = 'Posting...';
        
    };
