@@ -3,11 +3,19 @@ body
 {
     background-image:url(/ui/sunshine.gif);
     	
-		color: #fff; 
+	
 		
-		background-position:center;
+	background-position:center;
 	background-repeat: no repeat;
 	background-attachment: fixed;
 	background-size:cover;
     
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    margin-left: 20px;
 }
