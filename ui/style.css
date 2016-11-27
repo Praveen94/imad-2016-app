@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     margin-top: 60px;
   
-background-color:wheat;   
+background-color: sandybrown;
 	/*background-image:url(/ui/flower2.jpg);
 	background-position:center;
 	background-repeat: no repeat;
@@ -30,7 +30,7 @@ background-color:wheat;
 .container {
     max-width: 800px;
     margin: 0 auto;
-    color: red;
+   color: brown;
     font-family: sans-serif;
     padding-left: 20px;
     padding-right: 20px;
