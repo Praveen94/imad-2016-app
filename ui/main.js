@@ -240,7 +240,7 @@ function write_article()
        
        request.open('POST','/submit_article',true);
        request.setRequestHeader('Content-Type', 'application/json');
-       request.send(JSON.stringify({title:title,date:date,heading:heading,content:content,user_name:user_name}));
+       request.send(JSON.stringify({title:title,date:date,heading:heading,content:content}));
         submit.value = 'Posting...';
        
    };
