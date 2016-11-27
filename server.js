@@ -162,9 +162,9 @@ app.get('/logout', function (req, res) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/ui/logout.css"></link>
-    </head><body><br/><br/><br/><h3><center><u>You have Logged out Sucessfully!</u></center></h3><a href="/" class="btn btn-info btn-lg">
+    </head><body><br/><br/><br/><a href="/" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-home"></span> Home
-        </a></body></html>`);
+        </a><h3><center><u>You have Logged out Sucessfully!</u></center></h3></body></html>`);
 });
 
 var pool = new Pool(config);
