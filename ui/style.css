@@ -52,7 +52,9 @@ body {
 }
 
 #comment_text{
-background-color:blue;    
+background-color: papayawhip;   
+color:black;
+    
 }
 
 .comment_form {
