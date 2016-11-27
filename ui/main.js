@@ -26,7 +26,7 @@ function loadLoginForm () {
     //// Submit username/password to login
     var submit = document.getElementById('login_btn');
     submit.onclick = function () {
-        validateForm();
+        
         
         
         // Create a request object
