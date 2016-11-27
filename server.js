@@ -52,7 +52,7 @@ function createTemplate (data) {
               <h3>
                   ${heading}
               </h3>
-              
+              by ${user_name};
              <div>
                   ${date.toDateString()}
               </div>
@@ -273,7 +273,8 @@ app.post('/submit_article',function(req,res){
     var date=req.body.date;
     var heading=req.body.heading;
     var content=req.body.content;
-    pool.query('INSERT INTO article(title,heading,date,content) VALUES($1,$2,$3,$4)',[title,heading,date,content],function(err,result){
+    var user_name=req.body.user_name;
+    pool.query('INSERT INTO article(title,heading,date,content,user_name) VALUES($1,$2,$3,$4,$5)',[title,heading,date,content,user_name],function(err,result){
     if(err)
     {
        res.status(500).send(err.toString());
