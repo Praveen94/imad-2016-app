@@ -3,6 +3,11 @@ body {
     margin-top: 60px;
    background-image:url(/ui/flower2.jpg);
 /*background-color:wheat;*/    
+	background-position:center;
+	background-repeat: no repeat;
+	background-attachment: fixed;
+	background-size:cover;
+    
 }
 
 .center {
