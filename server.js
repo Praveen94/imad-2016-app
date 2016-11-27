@@ -43,6 +43,7 @@ function createTemplate (data) {
       <body>
           <div class="container">
               <div>
+              <br/><br/>
                    <a href="/">
           <span class="glyphicon glyphicon-home"></span>
         </a>
@@ -54,6 +55,7 @@ function createTemplate (data) {
               <div>
                   ${date.toDateString()}
               </div>
+              <br/><br/>
               <div>
                 ${content}
               </div>
