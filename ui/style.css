@@ -1,6 +1,8 @@
 body {
     font-family: sans-serif;
     margin-top: 60px;
+   background-image:url(/ui/flower2.jpg);
+/*background-color:wheat;*/    
 }
 
 .center {
@@ -22,7 +24,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    color: red;
+    color: white;
     font-family: sans-serif;
     padding-left: 20px;
     padding-right: 20px;
