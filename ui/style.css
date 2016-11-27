@@ -1,8 +1,10 @@
 body {
-    font-family: sans-serif;
-    margin-top: 60px;
-  
-background-color: sandybrown;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: sandybrown;
+    
 	/*background-image:url(/ui/flower2.jpg);
 	background-position:center;
 	background-repeat: no repeat;
@@ -10,6 +12,8 @@ background-color: sandybrown;
 	background-size:cover;
     */
 }
+
+
 
 .center {
     text-align: center;
