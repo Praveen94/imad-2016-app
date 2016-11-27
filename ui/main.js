@@ -123,7 +123,7 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
-                write_article();
+                write_article(this.responseText);
             } else {
                 loadLoginForm();
                 nowrite();
@@ -201,7 +201,7 @@ function loadArticles () {
     request.send(null);
 }
 
-function write_article()
+function write_article(username)
 {
     var submitArticle=`
     <h3>Write an article</h3>
@@ -237,10 +237,10 @@ function write_article()
        var date=document.getElementById('art_date').value;
        var heading=document.getElementById('art_heading').value;
        var content=document.getElementById('art_content').value;
-       
+       var user_name=username;
        request.open('POST','/submit_article',true);
        request.setRequestHeader('Content-Type', 'application/json');
-       request.send(JSON.stringify({title:title,date:date,heading:heading,content:content}));
+       request.send(JSON.stringify({title:title,date:date,heading:heading,content:content,user_name:user_name}));
         submit.value = 'Posting...';
        
    };
