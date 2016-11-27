@@ -1,13 +1,14 @@
 body {
     font-family: sans-serif;
     margin-top: 60px;
-   background-image:url(/ui/flower2.jpg);
-/*background-color:wheat;*/    
+  
+background-color:wheat;   
+	/*background-image:url(/ui/flower2.jpg);
 	background-position:center;
 	background-repeat: no repeat;
 	background-attachment: fixed;
 	background-size:cover;
-    
+    */
 }
 
 .center {
