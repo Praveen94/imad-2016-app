@@ -51,6 +51,10 @@ body {
     font-size: 0.8em;
 }
 
+#comment_text{
+background-color:blue;    
+}
+
 .comment_form {
     margin-left: 10px;
     padding-bottom: 10px;
