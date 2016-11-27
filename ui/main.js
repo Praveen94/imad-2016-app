@@ -6,10 +6,10 @@ function loadLoginForm () {
   </div>
 
   <div class="container">
-    <label><b>Username</b></label>
+    <label><b>Username:</b></label>
     <input type="text" id="username" placeholder="username" required /> 
 
-    <label><b>Password</b></label>
+    <label><b>Password:</b></label>
     <input type="password" id="password" placeholder="Password" required />
 <br /><br />
     <button type="submit" id="login_btn">Login</button> 
@@ -204,7 +204,7 @@ function loadArticles () {
 function write_article(username)
 {
     var submitArticle=`
-    <h3><u>Write an article</u></h3>
+    <h3>Write an article:</h3>
     <br />
     <p>Title:<input type="text" id="art_title" placeholder="title" /></p>
     <br />
