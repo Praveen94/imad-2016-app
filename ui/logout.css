@@ -19,3 +19,8 @@ body
     border-radius: 6px;
     margin-left: 20px;
 }
+
+h3{
+    color:white;
+    text-decoration:bold;
+}
