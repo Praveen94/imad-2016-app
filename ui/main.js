@@ -88,8 +88,8 @@ function loadLoginForm () {
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
+        //console.log(username);
+        //console.log(password);
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
@@ -204,7 +204,7 @@ function loadArticles () {
 function write_article(username)
 {
     var submitArticle=`
-    <h3>Write an article</h3>
+    <h3><u>Write an article</u></h3>
     <br />
     <p>Title:<input type="text" id="art_title" placeholder="title" /></p>
     <br />
