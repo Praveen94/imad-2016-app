@@ -41,10 +41,10 @@ function loadLoginForm () {
               } else if (request.status === 403) {
                   alert("Invalid credentials. Try again?");
               } else if (request.status === 500) {
-                 alert('Something went wrong on the server a');
+                 alert('Please enter the credentials again.');
                   submit.value = 'Login';
               } else {
-                  alert('Something went wrong on the server b');
+                  alert('Something went wrong on the server ');
                   submit.value = 'Login';
               }
               loadLogin();
