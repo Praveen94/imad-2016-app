@@ -44,9 +44,9 @@ function createTemplate (data) {
           <div class="container">
               <div>
               <br /><br />
-                   <a href="/">
+                  <p><a href="/">
           <span class="glyphicon glyphicon-home"></span>
-        </a>
+        </a>Home</p>
               </div>
               <hr/>
               <h3>
