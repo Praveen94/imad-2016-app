@@ -27,7 +27,7 @@ function loadLoginForm () {
     var submit = document.getElementById('login_btn');
     submit.onclick = function () {
         
-        
+        validateForm();
         
         // Create a request object
         var request = new XMLHttpRequest();
