@@ -27,7 +27,7 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    
+    var user_name=data.user_name;
     var htmlTemplate = `
     <html>
       <head>
@@ -52,6 +52,9 @@ function createTemplate (data) {
               <h3>
                   ${heading}
               </h3>
+              <p>
+              by ${user_name}
+              </p>
               <div>
                   ${date.toDateString()}
               </div>
