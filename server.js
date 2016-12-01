@@ -60,7 +60,7 @@ function createTemplate (data) {
               <div>
                 <pre>
                 ${content}
-              <pre>
+              </pre>
               </div>
               <hr/>
               <h4><u>Comments:</u></h4>
