@@ -58,7 +58,9 @@ function createTemplate (data) {
               </div>
               <br /><br />
               <div>
+                <pre>
                 ${content}
+              <pre>
               </div>
               <hr/>
               <h4><u>Comments:</u></h4>
