@@ -116,6 +116,15 @@ else if(password ===null || password ==="")
 	return false;
 }
    
+   if(!/^[a-zA-Z0-9_#.]+$/.test(username)){ 
+       
+                 res.status(400).send('Your username contains special characters other than _#.');
+        }
+        else{
+             
+         
+   
+   
    
    
    var salt = crypto.randomBytes(128).toString('hex');
@@ -126,8 +135,12 @@ else if(password ===null || password ==="")
       } else {
           res.send('User successfully created: ' + username);
       }
+   
+       
    });
-});
+}
+            
+        });
 
 app.post('/login', function (req, res) {
    var username = req.body.username;
