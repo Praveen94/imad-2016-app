@@ -118,7 +118,7 @@ else if(password ===null || password ==="")
    
    if(!/^[a-zA-Z0-9_#.]+$/.test(username)){ 
        
-                 res.status(400).send('Your username contains special characters other than _#.');
+                alert('Your username contains special characters other than _#.');
         }
         else{
              
