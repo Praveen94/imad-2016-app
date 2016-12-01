@@ -116,11 +116,6 @@ else if(password ===null || password ==="")
 	return false;
 }
    
-   if(!/^[a-zA-Z0-9_#.]+$/.test(username)){ 
-       
-                alert('Your username contains special characters other than _#.');
-        }
-        else{
              
          
    
@@ -138,7 +133,7 @@ else if(password ===null || password ==="")
    
        
    });
-}
+
             
         });
 
