@@ -179,9 +179,7 @@ function loadArticles () {
         </h4>
       </div>
       <div id="collapse${[i]}" class="panel-collapse collapse">
-        <div class="panel-body"><img style="width:50px;height:50px;"href="http://www.abdulkalam.com/kalam/theme/assets/img/profile%20images.jpg" />
-        <br />
-        ${articleData[i].content}
+        <div class="panel-body"> ${articleData[i].content}
           <br />
         <br />
         <a href="articles/${articleData[i].title}"><button class="btn btn-primary">View/Submit Comments</button></a>
