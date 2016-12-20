@@ -57,6 +57,10 @@ function createTemplate (data) {
                   ${date.toDateString()}
               </div>
               <br /><br />
+             <div>
+                  <img style="margin-left:auto;margin-right:auto" src="${image}" />
+             </div>
+              <br /><br />
               <div>
                 
                 ${content}
