@@ -282,6 +282,7 @@ app.post('/submit_article',function(req,res){
     var title=req.body.title;
     var date=req.body.date;
     var heading=req.body.heading;
+    var image=req.body.image;
     var content=req.body.content;
     var user_name=req.body.user_name;
     pool.query('INSERT INTO article(title,heading,image,date,content,user_name) VALUES($1,$2,$3,$4,$5,$6)',[title,heading,image,date,content,user_name],function(err,result){
