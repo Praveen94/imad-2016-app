@@ -57,6 +57,10 @@ function createTemplate (data) {
                   ${date.toDateString()}
               </div>
               <br /><br />
+             <div>
+                  <img style="margin-left:auto;margin-right:auto" src="${image}" />
+             </div>
+              <br /><br />
               <div>
                 
                 ${content}
@@ -278,9 +282,10 @@ app.post('/submit_article',function(req,res){
     var title=req.body.title;
     var date=req.body.date;
     var heading=req.body.heading;
+    var image=req.body.image;
     var content=req.body.content;
     var user_name=req.body.user_name;
-    pool.query('INSERT INTO article(title,heading,date,content,user_name) VALUES($1,$2,$3,$4,$5)',[title,heading,date,content,user_name],function(err,result){
+    pool.query('INSERT INTO article(title,heading,image,date,content,user_name) VALUES($1,$2,$3,$4,$5,$6)',[title,heading,image,date,content,user_name],function(err,result){
     if(err)
     {
        res.status(500).send(err.toString());
