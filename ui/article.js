@@ -1,119 +1,44 @@
-function loadLoginForm () {
-    var loginHtml = `
-     
-  <div class="imgcontainer">
-    <img src="/ui/img_avatar3.png" alt="Avatar" class="avatar">
-  </div>
+var currentArticleTitle = window.location.pathname.split('/')[2];
 
-  <div class="container">
-    <label><b>Username:</b></label>
-    <input type="text" id="username" placeholder="username" required /> 
-
-    <label><b>Password:</b></label>
-    <input type="password" id="password" placeholder="Password" required />
-<br /><br />
-    <button type="submit" id="login_btn">Login</button> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <button type="submit" id="register_btn">Register</button>
-
-  
-</div>
-
-  
+function loadCommentForm () {
+    var commentFormHtml = `
+        <h5>Submit a comment</h5>
+        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <br /><br />
+        <input type="submit" id="submit" value="Submit" />
+        <br/>
         `;
-    document.getElementById('login_area').innerHTML = loginHtml;
+    document.getElementById('comment_form').innerHTML = commentFormHtml;
     
-    //// Submit username/password to login
-    var submit = document.getElementById('login_btn');
+    // Submit username/password to login
+    var submit = document.getElementById('submit');
     submit.onclick = function () {
-        
-        validateForm();
-        
         // Create a request object
         var request = new XMLHttpRequest();
         
         // Capture the response and store it in a variable
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
-              if (request.status === 200) {
-                 alert("Sucess!");
-              } else if (request.status === 403) {
-                  alert("Invalid credentials. Try again?");
-              } else if (request.status === 500) {
-                 alert('Please enter the credentials again.');
-                  submit.value = 'Login';
-              } else {
-                  alert('Something went wrong on the server ');
-                  submit.value = 'Login';
-              }
-              loadLogin();
-          }  
-          
-        };
-        
-        // Make the request
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        
-        request.open('POST', '/login', true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        submit.value = 'Logging in...';
-        
-    };
-    
-    var register = document.getElementById('register_btn');
-    register.onclick = function () {
-       
-        validateForm();
-       
-        // Create a request object
-        var request = new XMLHttpRequest();
-        
-        // Capture the response and store it in a variable
-        request.onreadystatechange = function () {
-          if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
-              if (request.status === 200) {
-                  alert('User created successfully');
-                  register.value = 'Registered!';
-              } else {
-                  alert('Could not register the user');
-                  register.value = 'Register';
-              }
+                // Take some action
+                if (request.status === 200) {
+                    // clear the form & reload all the comments
+                    document.getElementById('comment_text').value = '';
+                    loadComments();    
+                } else {
+                    alert('Error! Could not submit comment');
+                }
+                submit.value = 'Submit';
           }
         };
         
         // Make the request
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        //console.log(username);
-        //console.log(password);
-        request.open('POST', '/create-user', true);
+        var comment = document.getElementById('comment_text').value;
+        request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        register.value = 'Registering...';
-    
+        request.send(JSON.stringify({comment: comment}));  
+        submit.value = 'Submitting...';
+        
     };
-}
-
-function loadLoggedInUser (username) {
-    var loginArea = document.getElementById('login_area');
-    loginArea.innerHTML = `
-    <br/><br/>
-    <a href="/logout"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-log-out"></span> Log out
-        </button></a>
-      <center>  <h2><u>Welcome <i>${username}</i></u></h2> </center>
-        
-        
-        <br/><br/><br/>
-        <h3><center>You have Logged In!!!</center></h3>
-    <img id="login_img" src="/ui/smile.png" />
-    
-    
-    `;
 }
 
 function loadLogin () {
@@ -122,11 +47,7 @@ function loadLogin () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
-                write_article(this.responseText);
-            } else {
-                loadLoginForm();
-                nowrite();
+                loadCommentForm(this.responseText);
             }
         }
     };
@@ -135,141 +56,45 @@ function loadLogin () {
     request.send(null);
 }
 
-function loadArticles () {
+function escapeHTML (text)
+{
+    var $text = document.createTextNode(text);
+    var $div = document.createElement('div');
+    $div.appendChild($text);
+    return $div.innerHTML;
+}
+
+function loadComments () {
         // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            var articles = document.getElementById('articles');
+            var comments = document.getElementById('comments');
             if (request.status === 200) {
-               
-                var articleData = JSON.parse(this.responseText);
-                var content = `
-                <div class="container">
-                <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          
-
-<a data-toggle="collapse" data-parent="#accordion" href="#collapse${[0]}">${articleData[0].heading}</a>
-        </h4>
-      </div>
-      <div id="collapse${[0]}" class="panel-collapse collapse in">
-        <div class="panel-body">${articleData[0].content}
-        <br />
-        <br />
-        <a href="articles/${articleData[0].title}"><button class="btn btn-primary">View/Submit Comments</button></a>
-        
-        
-        
-        </div>
-      </div>
-   
-    </div>`
-                ;
-               
-                for (var i=1; i< articleData.length; i++) {
-                    content += `<div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          
-
-<a data-toggle="collapse" data-parent="#accordion" href="#collapse${[i]}">${articleData[i].heading}</a>
-        </h4>
-      </div>
-      <div id="collapse${[i]}" class="panel-collapse collapse">
-        <div class="panel-body"> ${articleData[i].content}
-          <br />
-        <br />
-        <a href="articles/${articleData[i].title}"><button class="btn btn-primary">View/Submit Comments</button></a>
-        </div>
-      </div>
-    </div>`;
+                var content = '';
+                var commentsData = JSON.parse(this.responseText);
+                for (var i=0; i< commentsData.length; i++) {
+                    var time = new Date(commentsData[i].timestamp);
+                    content += `<div class="comment">
+                        <br />
+                        <p>${escapeHTML(commentsData[i].comment)}</p>
+                        <div class="commenter">
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                        </div>
+                    </div>`;
                 }
-                
-                content+=" </div></div>"
-                
-                articles.innerHTML = content;
+                comments.innerHTML = content;
             } else {
-                articles.innerHTML('Oops! Could not load all articles!')
+                comments.innerHTML('Oops! Could not load comments!');
             }
         }
     };
     
-    request.open('GET', '/get-articles', true);
+    request.open('GET', '/get-comments/' + currentArticleTitle, true);
     request.send(null);
 }
 
-function write_article(username)
-{
-    var submitArticle=`
-    <h3>Write an article:</h3>
-    <br />
-    <p>Title:<input type="text" id="art_title" placeholder="title" /></p>
-    <br />
-    <p>Date:<input type="text" id="art_date" placeholder="YYYY-MM-DD" /></p>
-    <br />
-    <p>Heading:<input type="text" id="art_heading" placeholder="heading" /></p>
-    <br />
-    <p>Image Link:<input type="text" id="art_image" placeholder="paste the image link here" /></p>
-    <br />
-    <p>Content:</p>
-    <br/><textarea rows="5" cols="200" id="art_content" placeholder="content">
-</textarea>
-    <br />
-    <input type="submit" id="art_submit" value="Submit" />
-    `;
-    document.getElementById('write_article').innerHTML=submitArticle;
-    
-   var submit=document.getElementById('art_submit');
-   submit.onclick=function()
-   {
-       var request=new XMLHttpRequest();
-       request.onreadystatechange=function()
-       {
-        if(request.readyState==4 && request.status==200)
-        {
-        submit.value='Posted';
-        }
-       
-            
-        };
-       var title=document.getElementById('art_title').value;    
-       var date=document.getElementById('art_date').value;
-       var heading=document.getElementById('art_heading').value;
-       var image=document.getElementById('art_image').value;
-       var content=document.getElementById('art_content').value;
-       var user_name=username;
-       request.open('POST','/submit_article',true);
-       request.setRequestHeader('Content-Type', 'application/json');
-       request.send(JSON.stringify({title:title,date:date,heading:heading,image:image,content:content,user_name:user_name}));
-        submit.value = 'Posting...';
-       
-   };
-       
-           
-           
-       }
-       
-function nowrite()
-{
- var nowrite=  `<h3>Oops!!!You don't seem to be logged in.</h3>
- <img id="nowrite" src="/ui/bean.gif" alt="Sorry"/>
- 
- 
- 
- `;
-  document.getElementById('write_article').innerHTML=nowrite;
-}
-    
-    
 
-   
-   
-
-
-
+// The first thing to do is to check if the user is logged in!
 loadLogin();
-
-loadArticles();
+loadComments();
