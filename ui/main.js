@@ -179,7 +179,7 @@ function loadArticles () {
         </h4>
       </div>
       <div id="collapse${[i]}" class="panel-collapse collapse">
-        <div class="panel-body">${articleData[i].content}
+        <div class="panel-body"> ${articleData[i].content}
           <br />
         <br />
         <a href="articles/${articleData[i].title}"><button class="btn btn-primary">View/Submit Comments</button></a>
@@ -212,6 +212,8 @@ function write_article(username)
     <br />
     <p>Heading:<input type="text" id="art_heading" placeholder="heading" /></p>
     <br />
+    <p>Image Link:<input type="text" id="art_image" placeholder="paste the image link here" /></p>
+    <br />
     <p>Content:</p>
     <br/><textarea rows="5" cols="200" id="art_content" placeholder="content">
 </textarea>
@@ -236,11 +238,12 @@ function write_article(username)
        var title=document.getElementById('art_title').value;    
        var date=document.getElementById('art_date').value;
        var heading=document.getElementById('art_heading').value;
+       var image=document.getElementById('art_image').value;
        var content=document.getElementById('art_content').value;
        var user_name=username;
        request.open('POST','/submit_article',true);
        request.setRequestHeader('Content-Type', 'application/json');
-       request.send(JSON.stringify({title:title,date:date,heading:heading,content:content,user_name:user_name}));
+       request.send(JSON.stringify({title:title,date:date,heading:heading,image:image,content:content,user_name:user_name}));
         submit.value = 'Posting...';
        
    };
